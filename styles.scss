@@ -1,0 +1,49 @@
+@import url("https://use.typekit.net/efa7ivj.css");
+
+$mrEaves: "mr-eaves-xl-sans", sans-serif;
+$indigo: rgba(41,10,126,1);
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+/*  START STYLES    */
+
+body {
+    line-height: 1.2;
+    font-family: $mrEaves;
+    color: #ddd;
+}
+
+.title, 
+.start-gallery {
+    @include flex(row, center, center);
+    padding: 10px;
+    height: 100vh;
+    width: 100vw;
+    background-color: $indigo;
+}
+
+.container {
+    background-color: rgb(48, 47, 47);
+    width: 500vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+
+    .panel {
+        border: 2px solid red;
+        width: 100vw;
+        height: 100%;
+        position: relative;
+    }
+    .panel4 {
+        @include flex(column, center, center);
+    }
+    .panel5 {
+        @include flex(row, center, center);
+    }
+}
